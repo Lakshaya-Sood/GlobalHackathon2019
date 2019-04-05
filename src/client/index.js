@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import "semantic-ui-css/semantic.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import App from "./app";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";

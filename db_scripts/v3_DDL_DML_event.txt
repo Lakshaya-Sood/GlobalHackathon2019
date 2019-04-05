@@ -1,0 +1,66 @@
+use local
+db.createCollection("event")
+db.event.insertMany(
+   [
+       {
+        title:"Going to Hinjewadi",
+        postedBy: "Toni Muller", 
+        gender: "Male", 
+        age: 23, 
+        from: "Pune Airport",
+        to: "Hinjewadi", 
+        availability: 3, 
+        phone: "8876347889", 
+        postedOn: ISODate(), 
+        rideTimestamp: ISODate()
+       },
+        {
+        title:"Going to Street Avenue",
+        postedBy: "Velma Cleveland", 
+        gender: "Female", 
+        age: 32, 
+        from: "Neptune Living",
+        to: "Street Avenue", 
+        availability: 2, 
+        phone: "8876347889", 
+        postedOn: ISODate(), 
+        rideTimestamp: ISODate()
+       },
+       {
+        title:"Going to Pune Station",
+        postedBy: "Riyad Whitfield", 
+        gender: "Female", 
+        age: 25, 
+        from: "Hinjewadi",
+        to: "Pune Station", 
+        availability: 1, 
+        phone: "9456787889", 
+        postedOn: ISODate(), 
+        rideTimestamp: ISODate()
+       },
+       {
+        title:"Going to Pune Airport",
+        postedBy: "Lara Best", 
+        gender: "Female", 
+        age: 26, 
+        from: "Hinjewadi",
+        to: "Pune Airport", 
+        availability: 1, 
+        phone: "9874347889", 
+        postedOn: ISODate(), 
+        rideTimestamp: ISODate()
+       },
+       {
+        title:"Going to Hinjewadi",
+        postedBy: "Clark Dunne", 
+        gender: "Male", 
+        age: 27,
+        from: "Pune Station",
+        to: "Hinjewadi", 
+        availability: 3, 
+        phone: "8876347889", 
+        postedOn: ISODate(), 
+        rideTimestamp: ISODate()
+       }
+    ]
+)
