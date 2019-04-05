@@ -1,4 +1,3 @@
-database is local
 > use local
 > db.createCollection("activity")
 > db.activity.insertMany(
