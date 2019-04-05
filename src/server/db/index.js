@@ -1,7 +1,7 @@
 var db = require("mongoose");
 
 db.connect("mongodb://localhost:27017/local", { useNewUrlParser: true });
-
+db.set('debug', true);
 db.connection.on("error", function(err) {
   console.error("connection error", err);
 });
