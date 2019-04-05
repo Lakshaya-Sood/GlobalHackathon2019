@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Link, Redirect, NavLink } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./app.scss";
 import Dashboard from "./container/dashboard/dashboard";
 import Rides from "./container/rides/rides";
