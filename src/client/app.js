@@ -7,7 +7,7 @@ import Rides from "./container/rides/rides";
 class App extends Component {
   render() {
     return (
-      <div className="row m-0">
+      <div className="row m-0 h-100vh">
         <div className="col-12">
           <Switch>
             <Route exact path="/dashboard" render={() => <Dashboard />} />

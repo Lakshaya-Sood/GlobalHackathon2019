@@ -1,0 +1,18 @@
+.add-ride {
+  position: fixed;
+  bottom: 5%;
+  right: 9%;
+  height: 55px;
+  width: 55px;
+  background: #0275d8;
+  border-radius: 55%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  font-size: 39px;
+  margin: 0;
+  padding: 0;
+  z-index: 9999999999;
+}
