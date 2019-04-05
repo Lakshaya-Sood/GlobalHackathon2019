@@ -12,7 +12,8 @@ db.event.insertMany(
         availability: 3, 
         phone: "8876347889", 
         postedOn: ISODate(), 
-        rideTimestamp: ISODate()
+        rideTimestamp: ISODate(),
+        vehicle: "Auto"
        },
         {
         title:"Going to Street Avenue",
@@ -24,7 +25,8 @@ db.event.insertMany(
         availability: 2, 
         phone: "8876347889", 
         postedOn: ISODate(), 
-        rideTimestamp: ISODate()
+        rideTimestamp: ISODate(),
+        vehicle: "Uber Cab"
        },
        {
         title:"Going to Pune Station",
@@ -36,7 +38,8 @@ db.event.insertMany(
         availability: 1, 
         phone: "9456787889", 
         postedOn: ISODate(), 
-        rideTimestamp: ISODate()
+        rideTimestamp: ISODate(),
+        vehicle: "Kaali Peeli"
        },
        {
         title:"Going to Pune Airport",
@@ -48,7 +51,8 @@ db.event.insertMany(
         availability: 1, 
         phone: "9874347889", 
         postedOn: ISODate(), 
-        rideTimestamp: ISODate()
+        rideTimestamp: ISODate(),
+        vehicle: "Ola Cab"
        },
        {
         title:"Going to Hinjewadi",
@@ -60,7 +64,8 @@ db.event.insertMany(
         availability: 3, 
         phone: "8876347889", 
         postedOn: ISODate(), 
-        rideTimestamp: ISODate()
+        rideTimestamp: ISODate(),
+        vehicle: "Taxi"
        }
     ]
 )

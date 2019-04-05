@@ -25,7 +25,7 @@ export const ActivityTileTray = function({
         return (
           <ActivityTile
             activity={activityItem}
-            key={activityItem.id}
+            key={activityItem._id}
             onActivitySelection={onActivitySelection}
           />
         );
