@@ -11,10 +11,11 @@
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "HTTPS=true react-scripts start",
+    "start": "react-scripts start",
     "server": "nodemon --exec babel-node ./src/server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
