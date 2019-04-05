@@ -1,0 +1,8 @@
+database is local
+> use local
+> db.createCollection("activity")
+> db.activity.insertMany(
+   [{name: "rides",title: "rides",icon:"fa fa-car", activityColor: "bg-travel"},
+   {name: "food",title: "food",icon:"fa fa-cutlery", activityColor: "bg-food"},
+   {name: "sports",title: "sports",icon:"fa fa-heartbeat", activityColor: "bg-sports"}]
+) 
