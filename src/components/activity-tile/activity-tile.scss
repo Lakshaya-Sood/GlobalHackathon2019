@@ -1,0 +1,41 @@
+.activity {
+  border: 1px solid #8a8a8a;
+  padding: 25px 10px 10px 10px;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.activityIcon {
+  position: absolute;
+  top: -25px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+.activity-title {
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bg-travel {
+  background: #31708f;
+}
+
+.bg-food {
+  background: #e6874e;
+}
+
+.bg-sports {
+  background: #4bc337;
+}
