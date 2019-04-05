@@ -7,6 +7,6 @@ app.listen(app.get("port"), function() {
 
 process.on('SIGINT', function() {
   console.log(`Gracefully shutting down from SIGINT (Ctrl-C)`);
-  db.close();
+  db.connection.close();
   process.exit(1);
 });
