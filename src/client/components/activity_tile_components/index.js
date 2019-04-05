@@ -1,9 +1,9 @@
 import React from "react";
 import "./activity_tile.scss";
 
-export const ActivityTile = function({ activity }) {
+export const ActivityTile = function({ activity, onActivitySelection }) {
   return (
-    <div className="col-6">
+    <div className="col-6" onClick={() => onActivitySelection(activity)}>
       <div className="row p-2">
         <div className="col-12 activity cursor-pointer">
           <div className="activity-title">{activity.title}</div>
@@ -15,11 +15,20 @@ export const ActivityTile = function({ activity }) {
     </div>
   );
 };
-export const ActivityTileTray = function({ activityList }) {
+export const ActivityTileTray = function({
+  activityList,
+  onActivitySelection
+}) {
   return (
     <div className="row pt-5">
       {activityList.map(activityItem => {
-        return <ActivityTile activity={activityItem} />;
+        return (
+          <ActivityTile
+            activity={activityItem}
+            key={activityItem.id}
+            onActivitySelection={onActivitySelection}
+          />
+        );
       })}
     </div>
   );
