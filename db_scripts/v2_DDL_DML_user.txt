@@ -1,1 +1,2 @@
-> db.createCollection("user")
+use local
+db.createCollection("user")
