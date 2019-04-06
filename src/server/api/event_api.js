@@ -11,7 +11,20 @@ const eventApi = {
         }
       });
     });
+  },
+  insertRecord: function(eventRecord) {
+    return new Promise((resolve, reject) => {
+      var newEvent = new eventModel(eventRecord);
+      newEvent.save((err, eventRecord) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(eventRecord);
+        }
+      });
+    });
   }
+  
 };
 
 export default eventApi;
