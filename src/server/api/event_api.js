@@ -1,9 +1,9 @@
 import eventModel from "../db/event_model";
 
 const eventApi = {
-  fetchAllRecords: function() {
+  fetchAllRecords: function(filters) {
     return new Promise((resolve, reject) => {
-      eventModel.find({}).exec((err, eventList) => {
+      eventModel.find(filters).exec((err, eventList) => {
         if (err) {
           reject(err);
         } else {

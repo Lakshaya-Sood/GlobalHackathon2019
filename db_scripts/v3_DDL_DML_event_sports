@@ -1,0 +1,89 @@
+db.event.insertMany(
+   [        
+       {
+          title: "Going for Football",
+          postedBy: "Uzair Wooten",
+          gender: "Male",
+          age: 38,
+          ground: "Element Ring",
+          availability: 10,
+          phone: "8876347889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "football",
+          charges: "NIL"
+        },
+        {
+          title: "Going for Tennis doubles",
+          postedBy: "Howard Sparks",
+          gender: "Male",
+          age: 27,
+          ground: "Myriad Centre Court",
+          availability: 3,
+          phone: "9986347889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "tennis",
+          charges: "100"
+        },
+        {
+          title: "Looking for Goalkeeper",
+          postedBy: "Jevan Sutton",
+          gender: "Male",
+          age: 22,
+          ground: "Harmony Ground",
+          availability: 1,
+          phone: "9563447889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "football",
+          charges: "NIL"
+        },
+        {
+          title: "Going for Tennis singles",
+          postedBy: "Carlos Benson",
+          gender: "Female",
+          age: 23,
+          ground: "Helix Centre Court",
+          availability: 1,
+          phone: "9234563889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "tennis",
+          charges: "150"
+        },
+        {
+          title: "Going for Snooker",
+          postedBy: "Safiyah Nairn",
+          gender: "Female",
+          age: 23,
+          ground: "9Balls Arena",
+          availability: 3,
+          phone: "9567863889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "snooker",
+          charges: "60"
+        },
+        {
+          title: "Going for Bowling",
+          postedBy: "Samara Aldred",
+          gender: "Male",
+          age: 21,
+          ground: "Bowling Kings",
+          availability: 4,
+          phone: "989033889",
+          postedOn: ISODate(),
+          rideTimestamp: ISODate(),
+          type: "sports",
+          sportName: "bowling",
+          charges: "200"
+        }
+    ]
+)
+

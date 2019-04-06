@@ -9,7 +9,7 @@ class Sports extends React.Component {
 
   goToFootball = () => {
     let { history } = this.props;
-    sessionStorage.setItem("sportsSelected", "Football");
+    sessionStorage.setItem("sportsSelected", "football");
     history.push("/sportsList");
   };
 

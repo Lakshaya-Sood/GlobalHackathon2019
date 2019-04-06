@@ -10,26 +10,11 @@ class SportsList extends React.Component {
     super(props);
     this.state = {
       sportsList: [
-        {
-          _id: 1,
-          title: "Going for Football",
-          postedBy: "Elon Musk",
-          gender: "Male",
-          age: 38,
-          ground: "SpaceX Launchpad",
-          availability: 10,
-          phone: "8876347889",
-          postedOn: new Date(),
-          rideTimestamp: new Date(),
-          type: "sports",
-          sportName: "football",
-          charges: "NIL"
-        }
       ],
       sportsJoined: [
         {
           _id: 99,
-          title: "Looking for goal keeper",
+          title: "Looking for referee",
           postedBy: "Jeff Bezos",
           gender: "Male",
           age: 49,
@@ -46,16 +31,16 @@ class SportsList extends React.Component {
     };
   }
 
-  //   componentWillMount = () => {
-  //     eventApiHelper
-  //       .fetchEvents()
-  //       .then(eventList => {
-  //         this.setState({ ridesList: eventList });
-  //       })
-  //       .catch(err => {
-  //         console.log(err);
-  //       });
-  //   };
+    componentWillMount = () => {
+      eventApiHelper
+        .fetchEvents({type:'sports',sportName:sessionStorage.getItem('sportsSelected')})
+        .then(eventList => {
+          this.setState({ sportsList: eventList });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    };
 
   goToCreateSport = () => {
     let { history } = this.props;

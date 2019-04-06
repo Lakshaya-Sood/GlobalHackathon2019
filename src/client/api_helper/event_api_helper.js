@@ -1,10 +1,14 @@
 import axios from "axios";
 
 const eventApiHelper = {
-  fetchEvents: () => {
+  fetchEvents: (filters) => {
     return new Promise((resolve, reject) => {
       axios
-        .get("/api/internal/event")
+        .get("/api/internal/event",{
+          params: {
+            filters: filters
+          }
+        })
         .then(response => {
           resolve(response.data.eventList);
         })

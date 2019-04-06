@@ -38,7 +38,7 @@ class Rides extends React.Component {
 
   componentWillMount = () => {
     eventApiHelper
-      .fetchEvents()
+      .fetchEvents({type:'ride'})
       .then(eventList => {
         this.setState({ ridesList: eventList });
       })
