@@ -17,6 +17,21 @@ const eventApiHelper = {
           reject(err);
         });
     });
+  },
+  saveEvents: (eventRecord) => {
+    return new Promise((resolve, reject) => {
+      axios
+        .post("/api/internal/event",{
+          eventRecord:eventRecord
+        })
+        .then(response => {
+          resolve(response.data.eventRecord);
+        })
+        .catch(err => {
+          console.log("err", err);
+          reject(err);
+        });
+    });
   }
 };
 
