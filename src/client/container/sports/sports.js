@@ -7,9 +7,9 @@ class Sports extends React.Component {
     super(props);
   }
 
-  goToFootball = () => {
+  goToSportList = sport => {
     let { history } = this.props;
-    sessionStorage.setItem("sportsSelected", "Football");
+    sessionStorage.setItem("sportsSelected", sport);
     history.push("/sportsList");
   };
 
@@ -22,38 +22,53 @@ class Sports extends React.Component {
         </h1>
         <div
           className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
-          onClick={this.goToFootball}
+          onClick={() => this.goToSportList("football")}
         >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>
           Football
         </div>
-        <div className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer">
+        <div
+          className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
+          onClick={() => this.goToSportList("cricket")}
+        >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>
           Cricket
         </div>
-        <div className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer">
+        <div
+          className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
+          onClick={() => this.goToSportList("badminton")}
+        >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>
           Badminton
         </div>
-        <div className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer">
+        <div
+          className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
+          onClick={() => this.goToSportList("squash")}
+        >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>
           Squash
         </div>
-        <div className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer">
+        <div
+          className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
+          onClick={() => this.goToSportList("table tennis")}
+        >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>
           Table Tennis
         </div>
-        <div className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer">
+        <div
+          className="col-6 pt-5 pb-5 font-weight-bold text-center cursor-pointer"
+          onClick={() => this.goToSportList("jogging")}
+        >
           <p className="p-3">
             <i className="fa fa-futbol-o text-danger mr-1" aria-hidden="true" />
           </p>

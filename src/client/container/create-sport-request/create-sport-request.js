@@ -8,6 +8,11 @@ class CreateSportRequest extends React.Component {
     super(props);
   }
 
+  goToSportsList = () => {
+    let { history } = this.props;
+    history.push("/sportsList");
+  };
+
   render() {
     return (
       <div className="row mt-3 mb-5">
@@ -42,7 +47,7 @@ class CreateSportRequest extends React.Component {
             <Button
               type="submit"
               className="bg-success text-white"
-              onClick={this.goToRides}
+              onClick={this.goToSportsList}
             >
               Create A Listing
             </Button>
