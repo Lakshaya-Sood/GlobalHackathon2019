@@ -62,10 +62,15 @@ class SportsList extends React.Component {
     history.push("/createRide");
   };
 
+  goToCreateSportRequest = () => {
+    let { history } = this.props;
+    history.push("/createSportRequest");
+  };
+
   render() {
     return (
       <div className="row mt-2">
-        <div className="add-ride" onClick={this.goToCreateRide}>
+        <div className="add-ride" onClick={this.goToCreateSportRequest}>
           <p className="plus-icon-align">+</p>
         </div>
         <div className="col-12">

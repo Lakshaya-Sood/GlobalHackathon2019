@@ -6,6 +6,7 @@ import Rides from "./container/rides/rides";
 import CreateRide from "./container/create-ride/create-ride";
 import Sports from "./container/sports/sports";
 import SportsList from "./container/sports-list/sports-list";
+import CreateSportRequest from "./container/create-sport-request/create-sport-request";
 
 class App extends Component {
   render() {
@@ -18,6 +19,11 @@ class App extends Component {
             <Route exact path="/createRide" render={() => <CreateRide />} />
             <Route exact path="/sports" render={() => <Sports />} />
             <Route exact path="/sportsList" render={() => <SportsList />} />
+            <Route
+              exact
+              path="/createSportRequest"
+              render={() => <CreateSportRequest />}
+            />
             <Redirect to="/dashboard" />
           </Switch>
         </div>
