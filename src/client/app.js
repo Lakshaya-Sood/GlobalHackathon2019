@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./app.scss";
 import Dashboard from "./container/dashboard/dashboard";
 import Rides from "./container/rides/rides";
+import CreateRide from "./container/create-ride/create-ride";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/dashboard" render={() => <Dashboard />} />
             <Route exact path="/ride" render={() => <Rides />} />
+            <Route exact path="/createRide" render={() => <CreateRide />} />
             <Redirect to="/dashboard" />
           </Switch>
         </div>

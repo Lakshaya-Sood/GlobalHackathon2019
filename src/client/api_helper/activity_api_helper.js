@@ -9,7 +9,7 @@ const activityApiHelper = {
           resolve(response.data.activityList);
         })
         .catch(err => {
-          console.log('err',err)
+          console.log("err", err);
           reject(err);
         });
     });

@@ -9,48 +9,54 @@ class RideListCard extends React.Component {
   }
 
   render() {
+    const { data } = this.props;
     return (
       <Card.Group>
         <Card>
           <Card.Content>
             <Image floated="left" size="mini" src="images/profile.png" />
-            <Card.Header>Ride title goes here</Card.Header>
-            <Card.Meta>John Doe · Female, 21</Card.Meta>
+            <Card.Header>{data.title}</Card.Header>
+            <Card.Meta>
+              {data.postedBy} · {data.gender}, {data.age}
+            </Card.Meta>
             <Card.Description>
               <div className="row fs-point7em mt-3">
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   FROM
-                  <p className="card-data">Pune Airport</p>
+                  <p className="card-data">{data.from}</p>
                 </div>
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   TO
-                  <p className="card-data">Ashok Meadows, Hinjewadi Phase 1</p>
+                  <p className="card-data">{data.to}</p>
                 </div>
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   FARE
-                  <p className="card-data">₹ 600</p>
+                  <p className="card-data">₹ {data.fare}</p>
                 </div>
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   AVAILABILITY
-                  <p className="card-data">3</p>
+                  <p className="card-data">{data.availability}</p>
                 </div>
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   TIME
                   <p className="card-data">02:17 AM</p>
                 </div>
-                <div className="col-6 text-muted mb-2">
+                <div className="col-6 text-muted mb-2 font-weight-bold">
                   VEHICLE
-                  <p className="card-data">Ola Cab</p>
+                  <p className="card-data">{data.vehicle}</p>
                 </div>
               </div>
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
             <div className="ui two buttons">
-              <Button basic color="green">
-                JOIN
+              <Button
+                basic
+                color={this.props.isJoined === "true" ? "red" : "green"}
+              >
+                {this.props.isJoined === "true" ? "UNJOIN" : "JOIN"}
               </Button>
-              <Button basic color="violet">
+              <Button basic color="purple">
                 CALL
               </Button>
             </div>

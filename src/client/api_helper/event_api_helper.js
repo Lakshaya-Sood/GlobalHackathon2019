@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const eventApiHelper = {
-  fetchActivities: () => {
+  fetchEvents: () => {
     return new Promise((resolve, reject) => {
       axios
         .get("/api/internal/event")
@@ -9,7 +9,7 @@ const eventApiHelper = {
           resolve(response.data.eventList);
         })
         .catch(err => {
-          console.log('err',err)
+          console.log("err", err);
           reject(err);
         });
     });

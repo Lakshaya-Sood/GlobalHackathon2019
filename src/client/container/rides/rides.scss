@@ -11,8 +11,17 @@
   display: flex;
   color: white;
   font-weight: bold;
-  font-size: 39px;
+  font-size: 42px;
   margin: 0;
   padding: 0;
   z-index: 9999999999;
+}
+
+.plus-icon-align {
+  margin-top: -7px !important;
+}
+
+.ui.cards ~ .ui.cards {
+  margin-top: 0.875em;
+  margin-top: -5px;
 }
