@@ -65,9 +65,9 @@ class SportsList extends React.Component {
   render() {
     return (
       <div className="row mt-2">
-        {/* <div className="add-ride" onClick={this.goToCreateRide}>
+        <div className="add-ride" onClick={this.goToCreateRide}>
           <p className="plus-icon-align">+</p>
-        </div> */}
+        </div>
         <div className="col-12">
           <h1 className="mt-3 mb-4">
             <i
@@ -84,9 +84,7 @@ class SportsList extends React.Component {
               "Search " + sessionStorage.getItem("sportsSelected") + "..."
             }
           />
-          <h5 className="mb-3">
-            Sports teamed ({this.state.sportsJoined.length})
-          </h5>
+          <h5 className="mb-3">My teams ({this.state.sportsJoined.length})</h5>
           {this.state.sportsJoined.map(ride => {
             return (
               <SportsListCard data={ride} key={ride._id} isJoined="true" />

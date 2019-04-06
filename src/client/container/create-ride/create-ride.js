@@ -61,9 +61,6 @@ class CreateRide extends React.Component {
               <label>Availability</label>
               <input placeholder="Availability" />
             </Form.Field>
-            <Form.Field>
-              <Checkbox label="I agree to the Terms and Conditions" />
-            </Form.Field>
             <Button
               type="submit"
               className="bg-success text-white"

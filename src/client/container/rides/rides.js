@@ -72,15 +72,15 @@ class Rides extends React.Component {
           </h1>
         </div>
         <div className="col-sm-6 col-xs-12 col-lg-4">
-          <Search className="mb-3" />
+          <Search className="mb-3" placeholder="Search for a Ride..." />
           <h5 className="mb-3">
-            Rides joined ({this.state.ridesJoined.length})
+            My current ride ({this.state.ridesJoined.length})
           </h5>
           {this.state.ridesJoined.map(ride => {
             return <RideListCard data={ride} key={ride._id} isJoined="true" />;
           })}
           <h5 className="mt-5">
-            Rides around me ({this.state.ridesList.length})
+            Requests within 250m. ({this.state.ridesList.length})
           </h5>
           {this.state.ridesList.map(ride => {
             return <RideListCard data={ride} key={ride._id} isJoined="false" />;
