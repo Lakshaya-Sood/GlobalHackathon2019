@@ -23,54 +23,57 @@ class CreateRide extends React.Component {
 
   render() {
     return (
-      <div className="row mt-3 mb-5">
-        <div className="col-6">
-          <button className="btn cta-book uber" onClick={this.goToUber}>
-            Book Uber
-          </button>
+      <React.Fragment>
+        <h1 className="mt-4 mb-5">Create ride request</h1>
+        <div className="row mt-3 mb-5">
+          <div className="col-6">
+            <button className="btn cta-book uber" onClick={this.goToUber}>
+              Book Uber
+            </button>
+          </div>
+          <div className="col-6">
+            <button className="btn cta-book ola" onClick={this.goToOla}>
+              Book Ola
+            </button>
+          </div>
+          <h4 className="col-12 text-center or">OR</h4>
+          <div className="col-12">
+            <Form>
+              <Form.Field>
+                <label>From</label>
+                <input placeholder="From" />
+              </Form.Field>
+              <Form.Field>
+                <label>To</label>
+                <input placeholder="To" />
+              </Form.Field>
+              <Form.Field>
+                <label>Fare</label>
+                <input placeholder="Fare" />
+              </Form.Field>
+              <Form.Field>
+                <label>Vehicle</label>
+                <input placeholder="Vehicle" />
+              </Form.Field>
+              <Form.Field>
+                <label>Time</label>
+                <input placeholder="Time" />
+              </Form.Field>
+              <Form.Field>
+                <label>Availability</label>
+                <input placeholder="Availability" />
+              </Form.Field>
+              <Button
+                type="submit"
+                className="bg-success text-white"
+                onClick={this.goToRides}
+              >
+                Create A Listing
+              </Button>
+            </Form>
+          </div>
         </div>
-        <div className="col-6">
-          <button className="btn cta-book ola" onClick={this.goToOla}>
-            Book Ola
-          </button>
-        </div>
-        <h4 className="col-12 text-center or">OR</h4>
-        <div className="col-12">
-          <Form>
-            <Form.Field>
-              <label>From</label>
-              <input placeholder="From" />
-            </Form.Field>
-            <Form.Field>
-              <label>To</label>
-              <input placeholder="To" />
-            </Form.Field>
-            <Form.Field>
-              <label>Fare</label>
-              <input placeholder="Fare" />
-            </Form.Field>
-            <Form.Field>
-              <label>Vehicle</label>
-              <input placeholder="Vehicle" />
-            </Form.Field>
-            <Form.Field>
-              <label>Time</label>
-              <input placeholder="Time" />
-            </Form.Field>
-            <Form.Field>
-              <label>Availability</label>
-              <input placeholder="Availability" />
-            </Form.Field>
-            <Button
-              type="submit"
-              className="bg-success text-white"
-              onClick={this.goToRides}
-            >
-              Create A Listing
-            </Button>
-          </Form>
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
