@@ -20,16 +20,19 @@ export const ActivityTileTray = function({
   onActivitySelection
 }) {
   return (
-    <div className="row pt-5">
-      {activityList.map(activityItem => {
-        return (
-          <ActivityTile
-            activity={activityItem}
-            key={activityItem._id}
-            onActivitySelection={onActivitySelection}
-          />
-        );
-      })}
-    </div>
+    <React.Fragment>
+      <h1 className="mt-4 mb-5">What would you like to share today?</h1>
+      <div className="row pt-5">
+        {activityList.map(activityItem => {
+          return (
+            <ActivityTile
+              activity={activityItem}
+              key={activityItem._id}
+              onActivitySelection={onActivitySelection}
+            />
+          );
+        })}
+      </div>
+    </React.Fragment>
   );
 };
