@@ -18,7 +18,7 @@ const eventApiHelper = {
         });
     });
   },
-  saveEvents: (eventRecord) => {
+  saveEvent: (eventRecord) => {
     return new Promise((resolve, reject) => {
       axios
         .post("/api/internal/event",{

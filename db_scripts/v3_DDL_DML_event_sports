@@ -9,7 +9,7 @@ db.event.insertMany(
           availability: 10,
           phone: "8876347889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "football",
           charges: "NIL"
@@ -23,7 +23,7 @@ db.event.insertMany(
           availability: 3,
           phone: "9986347889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "tennis",
           charges: "100"
@@ -37,7 +37,7 @@ db.event.insertMany(
           availability: 1,
           phone: "9563447889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "football",
           charges: "NIL"
@@ -51,7 +51,7 @@ db.event.insertMany(
           availability: 1,
           phone: "9234563889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "tennis",
           charges: "150"
@@ -65,7 +65,7 @@ db.event.insertMany(
           availability: 3,
           phone: "9567863889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "snooker",
           charges: "60"
@@ -79,7 +79,7 @@ db.event.insertMany(
           availability: 4,
           phone: "989033889",
           postedOn: ISODate(),
-          rideTimestamp: ISODate(),
+          playTimestamp: ISODate(),
           type: "sports",
           sportName: "bowling",
           charges: "200"
