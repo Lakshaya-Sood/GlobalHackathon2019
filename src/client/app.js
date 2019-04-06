@@ -4,6 +4,8 @@ import "./app.scss";
 import Dashboard from "./container/dashboard/dashboard";
 import Rides from "./container/rides/rides";
 import CreateRide from "./container/create-ride/create-ride";
+import Sports from "./container/sports/sports";
+import SportsList from "./container/sports-list/sports-list";
 
 class App extends Component {
   render() {
@@ -14,6 +16,8 @@ class App extends Component {
             <Route exact path="/dashboard" render={() => <Dashboard />} />
             <Route exact path="/ride" render={() => <Rides />} />
             <Route exact path="/createRide" render={() => <CreateRide />} />
+            <Route exact path="/sports" render={() => <Sports />} />
+            <Route exact path="/sportsList" render={() => <SportsList />} />
             <Redirect to="/dashboard" />
           </Switch>
         </div>

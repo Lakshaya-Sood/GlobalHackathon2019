@@ -74,7 +74,7 @@ class Rides extends React.Component {
         <div className="col-sm-6 col-xs-12 col-lg-4">
           <Search className="mb-3" />
           <h5 className="mb-3">
-            Rides Joined ({this.state.ridesJoined.length})
+            Rides joined ({this.state.ridesJoined.length})
           </h5>
           {this.state.ridesJoined.map(ride => {
             return <RideListCard data={ride} key={ride._id} isJoined="true" />;

@@ -38,10 +38,6 @@ class CreateRide extends React.Component {
         <div className="col-12">
           <Form>
             <Form.Field>
-              <label>Name</label>
-              <input placeholder="First Name" />
-            </Form.Field>
-            <Form.Field>
               <label>From</label>
               <input placeholder="From" />
             </Form.Field>

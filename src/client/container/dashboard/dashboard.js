@@ -26,6 +26,9 @@ class Dashboard extends React.Component {
     if (activity.title === "rides") {
       history.push("/ride");
     }
+    if (activity.title === "sports") {
+      history.push("/sports");
+    }
   };
 
   render() {

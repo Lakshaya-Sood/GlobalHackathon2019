@@ -46,5 +46,52 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- <iframe
+      src="https://maps.google.com/maps?q=18.5970823, 73.7068707&z=15&output=embed"
+    ></iframe>
+    <form action="geo/ruteplanlag.php" method="get">
+      <div id="divSample" class="hideClass">
+        Latitude:
+        <input type="text" id="Latitude" name="Latitude" value="" />
+        <br />
+        <br />Longitude:
+        <input type="text" id="Longitude" name="Longitude" value="" />
+        <br />
+      </div>
+      <br />Position
+      <input type="text" id="Position1" name="Position1" value="Miami" />
+      <br />
+      <br />
+      <input
+        type="button"
+        value="Get Location"
+        onclick="getLocationConstant()"
+      />
+      <br />
+      <br />
+      <input type="submit" value="Add GPS Location" class="small" />
+    </form>
+    <script type="text/javascript">
+      function getLocationConstant() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+        } else {
+          alert("Your browser or device doesn't support Geolocation");
+        }
+      }
+
+      // If we have a successful location update
+      function onGeoSuccess(event) {
+        document.getElementById("Latitude").value = event.coords.latitude;
+        document.getElementById("Longitude").value = event.coords.longitude;
+        document.getElementById("Position1").value =
+          event.coords.latitude + ", " + event.coords.longitude;
+      }
+
+      // If something has gone wrong with the geolocation request
+      function onGeoError(event) {
+        alert("Error code " + event.code + ". " + event.message);
+      }
+    </script> -->
   </body>
 </html>

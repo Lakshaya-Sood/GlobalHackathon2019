@@ -1,9 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { Button, Card, Image } from "semantic-ui-react";
-import "./ride-list-card.scss";
+import "./sports-list-card";
 
-class RideListCard extends React.Component {
+class SportsListCard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,16 +22,8 @@ class RideListCard extends React.Component {
             <Card.Description>
               <div className="row fs-point7em mt-3">
                 <div className="col-6 text-muted mb-2 font-weight-bold">
-                  FROM
-                  <p className="card-data">{data.from}</p>
-                </div>
-                <div className="col-6 text-muted mb-2 font-weight-bold">
-                  TO
-                  <p className="card-data">{data.to}</p>
-                </div>
-                <div className="col-6 text-muted mb-2 font-weight-bold">
-                  FARE
-                  <p className="card-data">₹ {data.fare}</p>
+                  CHARGES
+                  <p className="card-data">₹ {data.charges}</p>
                 </div>
                 <div className="col-6 text-muted mb-2 font-weight-bold">
                   AVAILABILITY
@@ -42,8 +34,8 @@ class RideListCard extends React.Component {
                   <p className="card-data">02:17 AM</p>
                 </div>
                 <div className="col-6 text-muted mb-2 font-weight-bold">
-                  VEHICLE
-                  <p className="card-data">{data.vehicle}</p>
+                  GROUND
+                  <p className="card-data">{data.ground}</p>
                 </div>
               </div>
             </Card.Description>
@@ -67,4 +59,4 @@ class RideListCard extends React.Component {
   }
 }
 
-export default withRouter(RideListCard);
+export default withRouter(SportsListCard);
