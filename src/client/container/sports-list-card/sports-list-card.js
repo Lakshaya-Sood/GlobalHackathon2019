@@ -23,7 +23,7 @@ class SportsListCard extends React.Component {
               <div className="row fs-point7em mt-3">
                 <div className="col-6 text-muted mb-2 font-weight-bold">
                   CHARGES
-                  <p className="card-data">₹ {data.charges}</p>
+                  <p className="card-data">₹ {data.charge}</p>
                 </div>
                 <div className="col-6 text-muted mb-2 font-weight-bold">
                   AVAILABILITY

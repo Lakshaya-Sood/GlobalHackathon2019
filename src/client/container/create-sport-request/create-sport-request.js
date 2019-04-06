@@ -1,14 +1,15 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./create-sport-request";
-import { Button, Checkbox, Form } from "semantic-ui-react";
+import { Button, Form } from "semantic-ui-react";
+import eventApiHelper from "../../api_helper/event_api_helper";
 
 class CreateSportRequest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
-      sportsName: sessionStorage.getItem("sportsSelected"),
+      sportName: "",
       availability: "",
       charge: "",
       ground: "",
@@ -28,16 +29,25 @@ class CreateSportRequest extends React.Component {
   };
 
   handleInputChange(key, value) {
-    console.log(key, value);
     this.setState({ [key]: value });
   }
 
   saveNewSportRequest = () => {
+    eventApiHelper
+      .saveEvent(this.state)
+      .then(response => console.log(response));
     this.goToSportsList();
   };
 
   render() {
-    let { title, availability, charge, ground, playTimestamp } = this.state;
+    let {
+      title,
+      sportName,
+      availability,
+      charge,
+      ground,
+      playTimestamp
+    } = this.state;
     return (
       <React.Fragment>
         <h1 className="mt-4 mb-5">Create post</h1>
@@ -59,12 +69,17 @@ class CreateSportRequest extends React.Component {
               <Form.Field>
                 <label>Sport</label>
                 <select
+                  value={sportName}
                   onChange={event =>
-                    this.handleInputChange("sport", event.target.value)
+                    this.handleInputChange("sportName", event.target.value)
                   }
                 >
                   <option value="football">Football</option>
-                  <option value="cricket">cricket</option>
+                  <option value="cricket">Cricket</option>
+                  <option value="badminton">Badminton</option>
+                  <option value="tennis">Tennis</option>
+                  <option value="snooker">Snooker</option>
+                  <option value="bowling">Bowling</option>
                 </select>
               </Form.Field>
               <Form.Field>

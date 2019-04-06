@@ -9,8 +9,7 @@ class SportsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sportsList: [
-      ],
+      sportsList: [],
       sportsJoined: [
         {
           _id: 99,
@@ -31,16 +30,19 @@ class SportsList extends React.Component {
     };
   }
 
-    componentWillMount = () => {
-      eventApiHelper
-        .fetchEvents({type:'sports',sportName:sessionStorage.getItem('sportsSelected')})
-        .then(eventList => {
-          this.setState({ sportsList: eventList });
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    };
+  componentWillMount = () => {
+    eventApiHelper
+      .fetchEvents({
+        type: "sports",
+        sportName: sessionStorage.getItem("sportsSelected")
+      })
+      .then(eventList => {
+        this.setState({ sportsList: eventList });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   goToCreateSport = () => {
     let { history } = this.props;
@@ -50,6 +52,19 @@ class SportsList extends React.Component {
   goToCreateSportRequest = () => {
     let { history } = this.props;
     history.push("/createSportRequest");
+  };
+
+  onSearch = (e, filter) => {
+    this.state.sportsList.filter(x => {
+      const properties = Object.keys(x);
+      for (let i = 0; i < properties.length; i++) {
+        // if (x[properties[i]] === filter.value) {
+        //   console.log(x);
+        //   return x;
+        // }
+        console.log(x[properties[i]]);
+      }
+    });
   };
 
   render() {
@@ -73,6 +88,7 @@ class SportsList extends React.Component {
             placeholder={
               "Search " + sessionStorage.getItem("sportsSelected") + "..."
             }
+            onSearchChange={(e, filterText) => this.onSearch(e, filterText)}
           />
           <h5 className="mb-3">My teams ({this.state.sportsJoined.length})</h5>
           {this.state.sportsJoined.map(ride => {

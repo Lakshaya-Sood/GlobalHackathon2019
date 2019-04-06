@@ -13,6 +13,7 @@ const eventApi = {
     });
   },
   insertRecord: function(eventRecord) {
+    console.log(eventRecord);
     return new Promise((resolve, reject) => {
       var newEvent = new eventModel(eventRecord);
       newEvent.save((err, eventRecord) => {
@@ -24,7 +25,6 @@ const eventApi = {
       });
     });
   }
-  
 };
 
 export default eventApi;
